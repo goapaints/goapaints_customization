@@ -12,7 +12,7 @@ frappe.ui.form.on('RND Project', {
 	            if(frm.doc.task_type == "Raw Material"){
 	                return {
 				filters: [
-					["Item","allow_purchase","=",1]
+					["Item","is_purchase_item","=",1]
 				]
 			};
 	            }

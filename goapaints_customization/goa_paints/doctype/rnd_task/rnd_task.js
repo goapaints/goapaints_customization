@@ -39,7 +39,7 @@ frappe.ui.form.on('RND Task', {
         	    var total_weight = 0;
         	    var total_volume_solid_qty = 0;
     	        frm.doc.bom_items.forEach(function(element){
-                    totalpercentage += element.percentage;
+                    // totalpercentage += element.percentage;
                     total_volume += element.qty_by_volume;
                     total_kg += element.qty;
                     total_weight += element.qty;
