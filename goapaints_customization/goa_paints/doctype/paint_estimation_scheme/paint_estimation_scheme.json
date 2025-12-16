@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PES.-.####",
+ "creation": "2022-08-10 13:57:31.010173",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "customer_name",
+  "subject",
+  "column_break_3",
+  "date",
+  "quotation",
+  "opportunity",
+  "hide_touchup",
+  "loss_factor",
+  "enabled_rounded_qty",
+  "section_break_5",
+  "scheme_table",
+  "terms_and_conditions_section",
+  "tc_name",
+  "terms"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "scheme_table",
+   "fieldtype": "Table",
+   "label": "Scheme Table",
+   "options": "Paint Estimation Scheme Table"
+  },
+  {
+   "fieldname": "quotation",
+   "fieldtype": "Link",
+   "label": "Quotation",
+   "options": "Quotation"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "terms_and_conditions_section",
+   "fieldtype": "Section Break",
+   "label": "Terms And Conditions"
+  },
+  {
+   "fieldname": "tc_name",
+   "fieldtype": "Link",
+   "label": "Terms",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fetch_from": "tc_name.terms",
+   "fieldname": "terms",
+   "fieldtype": "Text Editor",
+   "label": "Term Detail"
+  },
+  {
+   "default": "0",
+   "fieldname": "hide_touchup",
+   "fieldtype": "Check",
+   "label": "Touchup"
+  },
+  {
+   "default": "0",
+   "fieldname": "loss_factor",
+   "fieldtype": "Check",
+   "label": "Loss Factor"
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled_rounded_qty",
+   "fieldtype": "Check",
+   "label": "Enabled Rounded Qty"
+  },
+  {
+   "fieldname": "opportunity",
+   "fieldtype": "Link",
+   "label": "Opportunity",
+   "options": "Opportunity"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-03 15:40:33.319895",
+ "modified_by": "Administrator",
+ "module": "Goa Paints",
+ "name": "Paint Estimation Scheme",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

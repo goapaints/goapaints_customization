@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include goapaints_customization *.css
+recursive-include goapaints_customization *.csv
+recursive-include goapaints_customization *.html
+recursive-include goapaints_customization *.ico
+recursive-include goapaints_customization *.js
+recursive-include goapaints_customization *.json
+recursive-include goapaints_customization *.md
+recursive-include goapaints_customization *.png
+recursive-include goapaints_customization *.py
+recursive-include goapaints_customization *.svg
+recursive-include goapaints_customization *.txt
+recursive-exclude goapaints_customization *.pyc

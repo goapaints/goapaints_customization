@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RNDT.-.####",
+ "creation": "2022-08-16 11:12:19.829264",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "machine",
+  "column_break_3",
+  "process_loss",
+  "rnd_project",
+  "section_break_3",
+  "bom_items",
+  "total_percentage",
+  "total_volume",
+  "density",
+  "total_weight",
+  "total_volume_solid_qty",
+  "volume_solid_percent",
+  "material_parameters_section",
+  "quality_inspection_template_custom",
+  "table_of_specification",
+  "section_break_16",
+  "result",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "machine",
+   "fieldtype": "Link",
+   "label": "Machine",
+   "options": "Workstation"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "\nTrial\nApproved\nRejected\nFinal"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "RND Task",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bom_items",
+   "fieldtype": "Table",
+   "label": "BOM Items",
+   "options": "Table Of BOM Item"
+  },
+  {
+   "fieldname": "material_parameters_section",
+   "fieldtype": "Section Break",
+   "label": "Material Parameters"
+  },
+  {
+   "fieldname": "quality_inspection_template_custom",
+   "fieldtype": "Link",
+   "label": "Quality Inspection Template Custom",
+   "options": "Quality Inspection Template"
+  },
+  {
+   "fieldname": "table_of_specification",
+   "fieldtype": "Table",
+   "label": "Table Of Specification",
+   "options": "Specification"
+  },
+  {
+   "fieldname": "total_percentage",
+   "fieldtype": "Float",
+   "label": "Total Percentage"
+  },
+  {
+   "fieldname": "total_volume",
+   "fieldtype": "Float",
+   "label": "Total Volume"
+  },
+  {
+   "fieldname": "density",
+   "fieldtype": "Float",
+   "label": "Density"
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight"
+  },
+  {
+   "fieldname": "total_volume_solid_qty",
+   "fieldtype": "Float",
+   "label": "Total Volume Solid Qty"
+  },
+  {
+   "fieldname": "volume_solid_percent",
+   "fieldtype": "Float",
+   "label": "Volume Solid Percent"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "process_loss",
+   "fieldtype": "Float",
+   "label": "Process Loss"
+  },
+  {
+   "fieldname": "rnd_project",
+   "fieldtype": "Link",
+   "label": "RND Project",
+   "options": "RND Project"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-08-22 17:18:07.712494",
+ "modified_by": "Administrator",
+ "module": "Goa Paints",
+ "name": "RND Task",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

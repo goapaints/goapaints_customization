@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-08-10 14:08:28.570006",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "location",
+  "surface_preparation",
+  "column_break_3",
+  "area",
+  "item_code",
+  "item_name",
+  "bundle_size",
+  "section_break_6",
+  "vs",
+  "dft",
+  "tcc",
+  "loss_factor",
+  "pcc",
+  "column_break_11",
+  "touch_up_percentage",
+  "qty",
+  "rounded_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Location",
+   "options": "Location Of Paint Estimation Scheme"
+  },
+  {
+   "fieldname": "surface_preparation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Surface Preparation",
+   "options": "Surface Preparation"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Area"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "item_code.volume_solid_percent",
+   "fieldname": "vs",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "VS"
+  },
+  {
+   "fieldname": "dft",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "DFT"
+  },
+  {
+   "fieldname": "tcc",
+   "fieldtype": "Float",
+   "label": "TCC"
+  },
+  {
+   "fieldname": "pcc",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "PCC"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "100",
+   "fieldname": "touch_up_percentage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Touch Up Percentage"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fieldname": "rounded_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rounded Qty"
+  },
+  {
+   "default": "30",
+   "fieldname": "loss_factor",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Loss Factor"
+  },
+  {
+   "fetch_from": "item_code.bundle_size",
+   "fieldname": "bundle_size",
+   "fieldtype": "Int",
+   "label": "Bundle Size"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-09-06 19:06:26.986955",
+ "modified_by": "Administrator",
+ "module": "Goa Paints",
+ "name": "Paint Estimation Scheme Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

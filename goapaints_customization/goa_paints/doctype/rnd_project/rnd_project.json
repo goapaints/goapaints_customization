@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RNDP.-.####",
+ "creation": "2022-08-16 11:59:44.979287",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_type",
+  "requested_by",
+  "chemistry",
+  "raw_material_type",
+  "column_break_6",
+  "is_new_item",
+  "product",
+  "item_description",
+  "customer",
+  "supplier",
+  "coat_type",
+  "color_group",
+  "section_break_13",
+  "objective",
+  "column_break_15",
+  "result"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_type",
+   "fieldtype": "Select",
+   "label": "Task Type ",
+   "options": "\nCustomer Requested\nInternal\nRaw Material"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "Item"
+  },
+  {
+   "fieldname": "chemistry",
+   "fieldtype": "Link",
+   "label": "Chemistry",
+   "options": "Chemistry"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "coat_type",
+   "fieldtype": "Link",
+   "label": "Coat Type",
+   "options": "Coat Type"
+  },
+  {
+   "fieldname": "color_group",
+   "fieldtype": "Link",
+   "label": "Color Group",
+   "options": "Color Group"
+  },
+  {
+   "fieldname": "objective",
+   "fieldtype": "Text",
+   "label": "Objective"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Small Text",
+   "label": "Result"
+  },
+  {
+   "depends_on": "eval:doc.task_type ==\"Customer Requested\"",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "depends_on": "eval:doc.task_type ==\"Raw Material\"",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_new_item",
+   "fieldtype": "Check",
+   "label": "Is New Item"
+  },
+  {
+   "depends_on": "eval:doc.is_new_item == 1",
+   "fieldname": "item_description",
+   "fieldtype": "Data",
+   "label": "Item Description"
+  },
+  {
+   "fieldname": "raw_material_type",
+   "fieldtype": "Link",
+   "label": "Raw Material Type",
+   "options": "Raw Material Type"
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "label": "Requested By",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Reference",
+   "link_doctype": "RND Task",
+   "link_fieldname": "rnd_project"
+  }
+ ],
+ "modified": "2022-08-22 17:22:12.706014",
+ "modified_by": "Administrator",
+ "module": "Goa Paints",
+ "name": "RND Project",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

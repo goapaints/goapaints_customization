@@ -1,0 +1,96 @@
+<!-- <h1>{{doc.scheme_table}}</h1> -->
+<!-- <h2 style="text-align:center;"><b>Paint Estimation Scheme</b></h2> -->
+<div class="print-heading">
+  <div class = "row">
+      <div class="col-xs-6">
+          <!-- <img src = "http://134.209.157.182:9999/files/goapaints_logo.jpg"> -->
+          <img src = "https://goapaints.frappe.cloud/files/logo.png">
+      </div>
+      <div class="col-xs-6">
+          <h2>PAINT ESTIMATION SCHEME</h2><br>
+          <h4 class="sub-heading">{{ doc.name }}</h4>
+      </div>
+  </div>    	
+  
+  
+  </div>
+  
+<!-- <h4 style="text-align:right"><b>{{doc.name}}</b></h4> -->
+<div class="header row" style="margin-top:20px;">
+  <div class="col-xs-6">
+    <p style="font-size:14px">Customer:<b>{{doc.customer}}</b></p>
+  </div>
+  <div class="col-xs-6">
+    <p style="font-size:14px">Date:<b>{{frappe.format(doc.date,{'fieldtype':Date})}}</b></p>
+  </div>
+</div>
+
+<h5><b>Subject :</b> {{doc.subject}}</h5>
+{% for item in scheme %}
+  <p><strong>Location:</strong> {{item.location}}</p>
+  <p><strong>Surface Preparation:</strong> {{item.surface_preparation}}</p>
+  <p><strong>Area:</strong> {{item.area}}</p>
+
+<div class="table" style="margin-top:10px;">
+    
+        
+              <table>
+              <tbody>
+              <tr>
+                    <th>Item</th>
+                    <th>VS(%)</th>
+                    <th>DFT(µ)</th>
+                    <th>TCC(m2/L)</th>
+                    {% if doc.loss_factor == 1%}
+                    <th>LF(%)</th>
+                    {% endif %}
+                    {% if doc.hide_touchup == 1 %}
+                    <th>TUP(%)</th>
+                    {% endif %}
+                    <th>PCC(m2/L)</th>
+                    
+                    <th>Qty</th>
+                    {% if doc.enabled_rounded_qty == 1 %}
+                    <th>Rounded Qty</th>
+                    {% endif %}
+              </tr>
+              {% for i in item.data_detail_list %}
+              <tr>
+                    <td>{{i.item_name}}</td>
+                    <td>{{i.vs}}</td>
+                    <td>{{i.dft}}</td>
+                    <td>{{'%0.2f' % i.tcc|float}}</td>
+                    {% if doc.loss_factor == 1%}
+                    <td>{{i.loss_factor}}</td>
+                    {% endif %}
+                    {% if doc.hide_touchup == 1 %}
+                    <td>{{i.touch_up_percentage}}</td>
+                    {% endif %}
+                    <td>{{ '%0.2f' % i.pcc|float}}</td>
+                    
+                    <td>{{'%0.2f' % i.qty|float}}</td>
+                    {% if doc.enabled_rounded_qty == 1 %}
+                    <td>{{i.rounded_qty}}</td>
+                    {% endif %}
+              </tr>
+              {% endfor %}
+            </tbody>
+            
+    </table>
+    
+</div>
+{% endfor %}
+<div>
+  <p><b>Terms and Conditions:</b></p>
+  <p>
+    {{doc.terms}}
+  </p>
+</div>
+<style>
+    table,tr,td,th,thead,tbody{
+    border:1px solid black;
+    font-size:13px;
+    width:100%;
+    border-collapse: collapse;
+}
+</style>

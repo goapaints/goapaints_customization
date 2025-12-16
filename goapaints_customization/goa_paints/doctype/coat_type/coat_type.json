@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:coat_type_name",
+ "creation": "2022-08-16 11:56:12.317602",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "coat_type_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "coat_type_name",
+   "fieldtype": "Data",
+   "label": "Coat Type Name",
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-16 11:56:29.980980",
+ "modified_by": "Administrator",
+ "module": "Goa Paints",
+ "name": "Coat Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
