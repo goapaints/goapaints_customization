@@ -1,8 +1,8 @@
 # Copyright (c) 2022, Raj Tailor and contributors
 # For license information, please see license.txt
 
-from ast import Continue
-from distutils.sysconfig import customize_compiler
+# from ast import Continue
+# from distutils.sysconfig import customize_compiler
 import frappe
 from frappe.model.document import Document
 import json
